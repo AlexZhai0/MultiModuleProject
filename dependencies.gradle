@@ -1,0 +1,19 @@
+def arouterApiVersion="1.2.1.1"
+def arouterCompilerVersion="1.1.2.1"
+project.ext {
+//    android = [
+//            compileSdkVersion: 25,
+//            buildToolsVersion: "25.0.2",
+//            applicationId    : "com.baronzhang.android.modularization",
+//            minSdkVersion    : 15,
+//            targetSdkVersion : 25,
+//            versionCode      : 1,
+//            versionName      : "1.0"
+//    ]
+
+    dependencies = [
+            //alibaba ARouter
+            "ARouter-api"                 : "com.alibaba:arouter-api:${arouterApiVersion}",
+            "ARouter-compiler"            : "com.alibaba:arouter-compiler:${arouterCompilerVersion}"
+    ]
+}
