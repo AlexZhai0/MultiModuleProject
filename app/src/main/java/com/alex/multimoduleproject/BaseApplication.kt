@@ -8,10 +8,10 @@ class BaseApplication: Application() {
 
     override fun onCreate() {
         super.onCreate()
-//        if (BuildConfig.DEBUG) {
-//            ARouter.openLog();//开启日志
-//            ARouter.openDebug();//开启debug模式
-//        }
+        if (true) {
+            ARouter.openLog();//开启日志
+            ARouter.openDebug();//开启debug模式
+        }
         ARouter.init(this)
     }
 }

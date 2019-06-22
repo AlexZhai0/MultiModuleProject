@@ -3,8 +3,7 @@
           package="com.alex.module1">
 
     <application
-            android:theme="@style/AppTheme"
-            android:name="com.alex.basemudule.BaseApplication">
+            android:theme="@style/AppTheme" >
         <activity android:name=".Module1Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

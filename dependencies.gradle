@@ -1,19 +1,24 @@
-def arouterApiVersion="1.2.1.1"
-def arouterCompilerVersion="1.1.2.1"
-project.ext {
-//    android = [
-//            compileSdkVersion: 25,
-//            buildToolsVersion: "25.0.2",
-//            applicationId    : "com.baronzhang.android.modularization",
-//            minSdkVersion    : 15,
-//            targetSdkVersion : 25,
-//            versionCode      : 1,
-//            versionName      : "1.0"
-//    ]
+def a_router_api_version = "1.2.1.1"
+def a_router_compiler_version = "1.1.2.1"
 
-    dependencies = [
-            //alibaba ARouter
-            "ARouter-api"                 : "com.alibaba:arouter-api:${arouterApiVersion}",
-            "ARouter-compiler"            : "com.alibaba:arouter-compiler:${arouterCompilerVersion}"
+def constraint_layout_version = "2.0.0-alpha3"
+def appcompat_version = "1.1.0-alpha02"
+
+project.ext {
+    android = [
+            compileSdkVersion: 28,
+            minSdkVersion    : 21,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0"
     ]
+    dependencies = [
+            // alibaba ARouter
+            "arouter-api"     : "com.alibaba:arouter-api:${a_router_api_version}",
+            "arouter-compiler": "com.alibaba:arouter-compiler:${a_router_compiler_version}",
+
+            "constraint_layout": "androidx.constraintlayout:constraintlayout:${constraint_layout_version}",
+            "appcompat"       : "androidx.appcompat:appcompat:${appcompat_version}"
+    ]
+
 }
