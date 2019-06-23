@@ -3,7 +3,7 @@
           package="com.alex.module2">
 
     <application
-            android:theme="@style/AppTheme" >
+            android:theme="@style/m2_AppTheme" >
         <activity android:name=".Module2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

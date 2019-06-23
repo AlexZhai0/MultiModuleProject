@@ -20,11 +20,31 @@ android {
             }
         }
     }
+    signingConfigs {
+        config {
+            storeFile file("keystore")
+            storePassword 'alexzhai'
+            keyAlias 'key0'
+            keyPassword 'alexzhai'
+        }
+    }
+
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+            shrinkResources false
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
     }
 }
 
@@ -35,8 +55,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     testImplementation 'junit:junit:4.12'
 
+    if (!buildModule12Project.toBoolean()) {
+        implementation project(':module1')
+    }
+    if (!buildModule22Project.toBoolean()) {
+        implementation project(':module2')
+    }
     implementation project(':basemudule')
-    implementation project(':module1')
-    implementation project(':module2')
     kapt rootProject.ext.dependencies["arouter-compiler"]
 }
