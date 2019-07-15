@@ -8,13 +8,12 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    compileSdkVersion build_version.compileSdkVersion
     defaultConfig {
-//        applicationId "com.alex.module1"
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
+        minSdkVersion build_version.minSdkVersion
+        targetSdkVersion build_version.targetSdkVersion
+        versionCode build_version.versionCode
+        versionName build_version.versionName
         resourcePrefix "m1_"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -51,5 +50,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
     implementation project(':basemudule')
-    kapt rootProject.ext.dependencies["arouter-compiler"]
+    kapt libs.arouter_compiler
 }
