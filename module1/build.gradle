@@ -41,14 +41,14 @@ android {
         }
     }
 }
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    testImplementation 'junit:junit:4.12'
+    androidTestImplementation libs.test_runner
+    androidTestImplementation libs.test_ext
+    testImplementation libs.junit
 
     implementation project(':basemudule')
     kapt libs.arouter_compiler
 }
+

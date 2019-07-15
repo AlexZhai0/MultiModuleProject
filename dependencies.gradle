@@ -55,9 +55,9 @@ ext {
             kotlin_coroutines           : [group: 'org.jetbrains.kotlinx', name: 'kotlinx-coroutines-android', version: versions.kotlin_coroutines],
 
             junit                       : [group: 'junit', name: 'junit', version: versions.junit],
-            espresso_core               : [group: 'androidx.test.espresso', name: 'espresso-core', version: versions.espresso],
-            espresso_test_runner        : [group: 'androidx.test', name: 'runner', version: versions.test_runner],
-            espresso_test_ext           : [group: 'androidx.test.ext', name: 'junit', version: versions.test_ext],
+            test_espresso_core          : [group: 'androidx.test.espresso', name: 'espresso-core', version: versions.espresso],
+            test_runner                 : [group: 'androidx.test', name: 'runner', version: versions.test_runner],
+            test_ext                    : [group: 'androidx.test.ext', name: 'junit', version: versions.test_ext],
 
             appcompat                   : [group: 'androidx.appcompat', name: 'appcompat', version: versions.appcompat],
             material                    : [group: 'com.google.android.material', name: 'material', version: versions.material],
